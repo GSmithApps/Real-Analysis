@@ -88,4 +88,27 @@
 
 
 
+\section{Measure Theory Limit}
+
+I really like single sided epsilon balls, and the related idea of single sided limits.  I especially like the deleted versions in which the point about which we're considering is deleted, but I'll explain more about that soon.  Single sided limits great because on either side of a single domain point, a function can behave totally differently. Which is sort of the whole idea. Every point of the continuum is a hinge point between what's on its left and on its right, and the behavior of the two sides can be completely different. So I think single sided limits/neighborhoods are nice because they allow us to treat these two parts of functions in their own right.
+
+Deleted neighborhoods and limits which exclude the individual point are great because they ignore what happens at the single point. And what's also interesting is that they ignore every other point. For example, if you pick a given point, you can make your delta ball small enough to exclude that point. The only situation in which you can include something would be an infinite set in which the point in question is a limit point of that set. So no finite set or individual point is ever considered in a single-sided, deleted neighborhood. And in fact, no point is ever considered in a deleted neighborhood, regardless if it's left or right. And this applies to every single domain point, so under this thinking, no finite set of points or single point ever matters. 
+
+I also really like the idea of considering properties that hold almost everywhere, and ignoring properties that hold almost nowhere. The notion of almost everywhere is awesome because it ignores the behavior of sets with zero measure. This means that any behaviors that are oddities can be ignored. 
+
+And what's interesting about combining these ideas is that if we consider properties in the "almost everywhere" sense, there is no difference between deleted neighborhoods and non-deleted neighborhoods. The singularity of the neighborhood point is ignored under "almost everywhere".  So this idea of almost everywhere is a souped-up version of the deleted neighborhood.
+
+\subsection{Things that do matter}
+Limits that diverge such as $\sin \frac{1}{x}$ at $x=0$ and limits that go to infinity, such as 1/x. 
+
+So what we really want to know is how often one of these two things happen. When does the limit diverge, and when does it go to infinity? And we want to know if these happen at all in a function, and if so, how frequently. 
+
+As a small point, I'd like to include $\infty$ in the domain in the sense that $\displaystyle \lim_{x \to \infty} x = \infty$, which I'd include in this section of problems, and I'd also say that $\displaystyle \lim_{x \to \infty} \sin x$ does not exist.  
+
+\subsection{Definition}
+
+$$\forall I, $$
+
+$$\exists B_{\epsilon} , \mu(B_{\delta} \setminus f^{-1}(B_\epsilon)) = 0$$
+
 \end{document}
