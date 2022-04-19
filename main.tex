@@ -1,5 +1,7 @@
 \documentclass{article}
 \usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts, amssymb}
 \usepackage[letterpaper, total={7.5in, 9in}]{geometry}
 \title{Intermediate Analysis}
 \author{Grant Smith }
@@ -110,5 +112,21 @@ As a small point, I'd like to include $\infty$ in the domain in the sense that $
 $$\forall I, $$
 
 $$\exists B_{\epsilon} , \mu(B_{\delta} \setminus f^{-1}(B_\epsilon)) = 0$$
+
+\subsection{New Theory}
+
+How often can a function break essential continuity?
+
+Working in the context of real functions:
+
+Let's say a function is essentially continuous at a domain point $c$ iff
+
+$$\exists L, \forall B(L), \exists \delta, B_\delta (c) \subseteq \textrm{Cl}(f^{-1}(B(L)))$$
+
+Which means it breaks essential continuity if: 
+
+$$\forall L, \exists B(L), \forall \delta, B_\delta (c) \nsubseteq  \textrm{Cl}(f^{-1}(B(L)))$$
+
+I'm wondering about the size of this set of discontinuities. I'm pretty sure it can at least be countable. But I'm wondering if it can be uncountable or have Lebesgue Measure $> 0$.
 
 \end{document}
