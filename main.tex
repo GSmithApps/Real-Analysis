@@ -1,7 +1,7 @@
 \documentclass{article}
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}
-\usepackage{amsfonts, amssymb}
+\usepackage{amsfonts, amssymb, hyperref}
 \usepackage[letterpaper, total={7.5in, 9in}]{geometry}
 \title{Intermediate Analysis}
 \author{Grant Smith }
@@ -128,5 +128,21 @@ Which means it breaks essential continuity if:
 $$\forall L, \exists B(L), \forall \delta, B_\delta (c) \nsubseteq  \textrm{Cl}(f^{-1}(B(L)))$$
 
 I'm wondering about the size of this set of discontinuities. I'm pretty sure it can at least be countable. But I'm wondering if it can be uncountable or have Lebesgue Measure $> 0$.
+
+\subsection{New Theory From Discontinuity Classification}
+
+I'm going to define an essential discontinuity as the following:
+
+Pick a ball in the domain, and call it $B$.
+
+There exists a nonzero measure set of codomain points, call the set $R$, each of whose elements, $r$, have a ball around them whose inverse image is within $B$.
+
+Some examples of this are $sin(\frac{1}{x})$ and $\frac{1}{x}$ because in both cases, there are a nonzero measure set of codomain points whose surrounding ball has an inverse image inside a ball around the domain point in question.
+
+I think I also need to look into oscillation. The wikipedia page is \url{https://en.wikipedia.org/wiki/Oscillation_(mathematics)/}
+
+We know from \url{https://en.wikipedia.org/wiki/Classification_of_discontinuities/} that the set $D$ of discontinuities is always $F_\sigma$.  I'm pretty sure this can be bigger than countable.  I'm also pretty sure that it can have measure above zero because later in the article, Lebesgue's Theorem is discussed, which says that a function is reimann integrable iff $D$ has measure zero, which makes me think that $D$ can have nonzero measure in general, but it wouldn't be reimann integrable.  But I am pretty sure this includes discontinuities of the first kind such as removable or jumps.  So what I'm wondering is that: we know a function's set of discontinuities can have nonzero measure, but what about if we only discuss discontinuities of the second kind... can the measure of that set be more than zero?
+
+
 
 \end{document}
