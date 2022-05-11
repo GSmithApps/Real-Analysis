@@ -1,7 +1,7 @@
 \documentclass{article}
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}
-\usepackage{amsfonts, amssymb, hyperref}
+\usepackage{amsfonts, amssymb, hyperref,graphicx}
 \usepackage[letterpaper, total={7.5in, 9in}]{geometry}
 \title{Intermediate Analysis}
 \author{Grant Smith }
@@ -143,6 +143,25 @@ I think I also need to look into oscillation. The wikipedia page is \url{https:/
 
 We know from \url{https://en.wikipedia.org/wiki/Classification_of_discontinuities/} that the set $D$ of discontinuities is always $F_\sigma$.  I'm pretty sure this can be bigger than countable.  I'm also pretty sure that it can have measure above zero because later in the article, Lebesgue's Theorem is discussed, which says that a function is reimann integrable iff $D$ has measure zero, which makes me think that $D$ can have nonzero measure in general, but it wouldn't be reimann integrable.  But I am pretty sure this includes discontinuities of the first kind such as removable or jumps.  So what I'm wondering is that: we know a function's set of discontinuities can have nonzero measure, but what about if we only discuss discontinuities of the second kind... can the measure of that set be more than zero?
 
+\subsection{Essential Continuity}
 
+In my theory of almost continuity, we can't include jump discontinuities because that would break our properties such as the essential mean value theorem.
+
+\subsection{well-behavedness}
+
+jump discontinuities are pretty well behaved. The do, though, break almost continuity and therefore break mean value theorem, etc. 
+
+But they aren't essential discontinuities, so I'd still say they're pretty well-behaved.
+
+\subsection{sets and partitions of the reals}
+
+I was wondering if you could partition the reals in such a way that around a given point, you could have a nonzero meausre amount of each partition (the original way I thought about it was just to have two partitions and to determine if on either side of the point, you could have some of both partition).  It turns out the answer is yes, and there are a couple good examples.
+
+One example is $f(x) = \sin(1/x)$ at zero. To partition the set, we could have $A$ be the set of $x$ such that $f(x)>0$ and the other partition, $B$ be the set of $x$ such that $f(x)\leq 0$.  Then no matter how small you draw your ball around zero, you'll have some nonzero amount of both $A$ and $B$.
+
+I also wondered if you could do this with infinite partitions. In particular, countable, uncountable, or measure $>0$.  It turns out that you can do it with countable partitions, but I'm not sure about uncountable or greater.  Here is an example of the countable:
+
+\includegraphics[width=7in]{set-partitions.jpg}
+\centering
 
 \end{document}
